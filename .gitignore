@@ -1,2 +1,5 @@
 # Ignore user_cred.py
 user_cred.py
+
+# Ignoring .DS_Store
+.DS_Store
