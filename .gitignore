@@ -3,3 +3,7 @@ user_cred.py
 
 # Ignoring .DS_Store
 .DS_Store
+
+# Ignore Cache (bad vars when setting up new device)
+.cache
+**/__pycache__/
