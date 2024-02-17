@@ -1,3 +1,4 @@
+# JNQ SY
 from time import sleep
 from spotify_app import sp
 from spotify_app import toggle_player, next_track, previous_track, enable_shuffle, disable_shuffle
