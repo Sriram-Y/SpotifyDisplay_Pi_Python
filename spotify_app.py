@@ -44,10 +44,12 @@ def toggle_player():
         # If it is playing
         if playback_state is not None and 'is_playing' in playback_state and playback_state['is_playing']:
             sp.pause_playback(device_id=active_device["id"])
+            get_album_cover()
             print("Playback paused.")
         # If it is not playing
         else:
             sp.start_playback(device_id=active_device["id"])
+            get_album_cover()
             print("Playback started.")
     # Else if active device is None
     else:
@@ -73,4 +75,11 @@ def enable_shuffle():
 def disable_shuffle():
     sp.shuffle(state=False)
     print("Shuffle disabled.")
-    
+
+def get_album_art():
+    playback_state = sp.current_playback()
+    if playback_state is not None and 'item' in playback_state:
+        album_art = playback_state['item']['album']['images'][0]['url']
+        return album_art
+    else:
+        return None
