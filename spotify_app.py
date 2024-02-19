@@ -53,3 +53,11 @@ def enable_shuffle():
 def disable_shuffle():
     sp.shuffle(state=False)
     print("Shuffle disabled.")
+
+def get_album_art():
+    playback_state = sp.current_playback()
+    if playback_state is not None and 'item' in playback_state:
+        album_art = playback_state['item']['album']['images'][0]['url']
+        return album_art
+    else:
+        return None
