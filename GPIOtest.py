@@ -10,6 +10,7 @@ shuffle_button = Button(23)
 shuffle_flag = False;
 
 # TODO: Need to have initialize routine (our flags must reflect the state of the player)
+# Check user conditions (Shuffle, Repeat, always starting on pause when the device is powered on.)
 
 while True:
     if play_pause_button.is_pressed:
